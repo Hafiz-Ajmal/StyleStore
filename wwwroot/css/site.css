@@ -29,3 +29,23 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+.login-promo {
+  background-image: url('/images/cloth.png');
+    background-color: #ff812f;
+    color: white;
+    min-height: 500px;
+    
+}
+
+.login-promo img {
+    width: 100%;
+    max-width: 350px;
+    display: block;
+    margin: 30px auto 0;
+}
+.border-orange
+{
+ 
+  border-color: #ff812f;
+}
