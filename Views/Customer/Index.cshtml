@@ -1,4 +1,5 @@
 
+@model IEnumerable<StyleStore.Models.Category>
 @{
     Layout = null;
 }
@@ -115,7 +116,7 @@
                     </a>
 
                 </div>
-
+                @await Html.PartialAsync("~/Pages/Shared/_LoginPartial.cshtml")
             </div>
         </div>
     </nav>
@@ -175,50 +176,34 @@
 
         <div class="row g-4">
 
-            <!-- MEN -->
-            <div class="col-12 col-md-4">
-
-                <a href="/Product/Index?category=men">
-                    <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600"
+            <!-- Categories -->
+           
+            @foreach(var e in @Model)
+            {
+                  
+                     <div class="col-12 col-md-4">
+                          <a href="/Product/Index?category=@e.Name">
+                      <img src="@e.ImageUrl"
                          class="category-img rounded"
-                         alt="Men Clothing">
-                </a>
+                         alt="@e.Name ">
+                      </a>
+                       <h5 class="text-center mt-3 fw-bold">
+                        @e.Name 
+                  </h5>
 
-                <h5 class="text-center mt-3 fw-bold">
-                    Men's Clothing
-                </h5>
+                  </div>
 
-            </div>
+                   
+                     
+                     
+                }
+              
 
-            <!-- WOMEN -->
-            <div class="col-12 col-md-4">
+               
+            
 
-                <a href="/Product/Index?category=women">
-                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600"
-                         class="category-img rounded"
-                         alt="Women Clothing">
-                </a>
-
-                <h5 class="text-center mt-3 fw-bold">
-                    Women's Clothing
-                </h5>
-
-            </div>
-
-            <!-- KIDS -->
-            <div class="col-12 col-md-4">
-
-                <a href="/Product/Index?category=kids">
-                    <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=600"
-                         class="category-img rounded"
-                         alt="Kids Clothing">
-                </a>
-
-                <h5 class="text-center mt-3 fw-bold">
-                    Kids' Clothing
-                </h5>
-
-            </div>
+         
+            
 
         </div>
     </div>

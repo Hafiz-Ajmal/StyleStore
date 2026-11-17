@@ -1,0 +1,34 @@
+
+# .NET build files
+bin/
+obj/
+
+# IDE files
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+
+# Logs
+[Ll]ogs/
+*.log
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+appsettings.Development.json
+secrets*.json
+
+# Local database files and backups
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+*.backup
+*.dump
+
+# Operating system files
+.DS_Store
+Thumbs.db
